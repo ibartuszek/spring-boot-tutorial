@@ -1,4 +1,4 @@
-package com.example.springboottutorial;
+package com.example.springboottutorial.resttemplate;
 
 import java.text.MessageFormat;
 import java.util.Arrays;

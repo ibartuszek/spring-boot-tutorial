@@ -1,4 +1,4 @@
-package com.example.springboottutorial.hello;
+package com.example.springboottutorial.simplecontroller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
