@@ -1,4 +1,4 @@
-package com.example.springboottutorial;
+package com.example.springboottutorial.product;
 
 public class Product {
 

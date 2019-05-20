@@ -1,4 +1,4 @@
-package com.example.springboottutorial;
+package com.example.springboottutorial.product;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,6 +41,9 @@ public class ProductServiceController {
 
     @RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateProduct(@PathVariable("id") String id, @RequestBody Product product) {
+        if (!ProductServiceController.productRepo.containsKey(id)) {
+            throw new ProductNotFoundException();
+        }
         ProductServiceController.productRepo.remove(id);
         product.setId(id);
         ProductServiceController.productRepo.put(id, product);
