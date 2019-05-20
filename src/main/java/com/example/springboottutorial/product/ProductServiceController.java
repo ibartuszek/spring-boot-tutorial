@@ -26,8 +26,8 @@ public class ProductServiceController {
         ProductServiceController.productRepo.put(honey.getId(), honey);
 
         Product almond = new Product();
-        honey.setId("2");
-        honey.setName("Almond");
+        almond.setId("2");
+        almond.setName("Almond");
         ProductServiceController.productRepo.put(almond.getId(), almond);
     }
 

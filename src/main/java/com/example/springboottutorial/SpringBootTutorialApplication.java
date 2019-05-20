@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class SpringBootTutorialApplication extends SpringBootServletInitializer implements ApplicationRunner {
@@ -23,6 +25,11 @@ public class SpringBootTutorialApplication extends SpringBootServletInitializer 
     @Override
     public void run(ApplicationArguments arg0) throws Exception {
         System.out.println("Hello World from Application Runner");
+    }
+
+    @Bean
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
     }
 
 }
