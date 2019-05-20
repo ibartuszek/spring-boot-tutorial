@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.springboottutorial.product.domain.Product;
+import com.example.springboottutorial.product.exception.ProductNotFoundException;
+
 @RestController
 public class ProductServiceController {
 

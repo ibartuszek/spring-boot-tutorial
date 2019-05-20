@@ -1,4 +1,4 @@
-package com.example.springboottutorial.product;
+package com.example.springboottutorial.product.domain;
 
 public class Product {
 
