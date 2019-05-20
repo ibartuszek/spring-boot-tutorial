@@ -1,4 +1,4 @@
-package com.example.springboottutorial.product;
+package com.example.springboottutorial.product.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
