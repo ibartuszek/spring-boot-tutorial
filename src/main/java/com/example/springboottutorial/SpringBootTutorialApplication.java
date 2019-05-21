@@ -8,6 +8,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class SpringBootTutorialApplication extends SpringBootServletInitializer implements ApplicationRunner {
@@ -30,6 +32,17 @@ public class SpringBootTutorialApplication extends SpringBootServletInitializer 
     @Bean
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
+    }
+
+    // Global CORS configuration
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(final CorsRegistry registry) {
+                registry.addMapping("/products").allowedOrigins("http://localhost:8080");
+            }
+        };
     }
 
 }
