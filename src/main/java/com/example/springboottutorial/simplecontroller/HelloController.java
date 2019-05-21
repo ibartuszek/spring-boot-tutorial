@@ -14,7 +14,7 @@ public class HelloController {
     @Value("${spring.application.name:default_name}")
     private String name;
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/hello")
     public String hello() {
         HelloController.LOGGER.info(name);
         return name;

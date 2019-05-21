@@ -29,25 +29,25 @@ public class ConsumeWebService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping(value = "/template/products")
+    @RequestMapping(value = "/templates/products")
     public String getProductList() {
         HttpEntity<String> entity = new HttpEntity<>(createHeadersWithJson());
         return restTemplate.exchange(MessageFormat.format(requestUrl, port), HttpMethod.GET, entity, String.class).getBody();
     }
 
-    @RequestMapping(value = "/template/products", method = RequestMethod.POST)
+    @RequestMapping(value = "/templates/products", method = RequestMethod.POST)
     public String createProduct(@RequestBody Product product) {
         HttpEntity<String> entity = new HttpEntity<>(createHeadersWithJson());
         return restTemplate.exchange(MessageFormat.format(requestUrl, port), HttpMethod.POST, entity, String.class).getBody();
     }
 
-    @RequestMapping(value = "/template/products/{id}")
+    @RequestMapping(value = "/templates/products/{id}")
     public String updateProduct(@PathVariable("id") String id, @RequestBody Product product) {
         HttpEntity<Product> entity = new HttpEntity<>(product, createHeadersWithJson());
         return restTemplate.exchange(MessageFormat.format(requestUrl, port).concat(id), HttpMethod.PUT, entity, String.class).getBody();
     }
 
-    @RequestMapping(value = "/template/products/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/templates/products/{id}", method = RequestMethod.DELETE)
     public String deleteProduct(@PathVariable("id") String id) {
         HttpEntity<Product> entity = new HttpEntity<>(createHeadersWithJson());
         return restTemplate.exchange(MessageFormat.format(requestUrl, port).concat(id), HttpMethod.DELETE, entity, String.class).getBody();
