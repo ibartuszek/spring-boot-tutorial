@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1"/>
+  <title>View Products</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script th:src="@{/javascripts/getProducts.js}"></script>
+<div id="productsJson"></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getProducts("localhost", "9091", "productsJson");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1"/>
+  <title>Add Products</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script th:src="@{/javascripts/addProduct.js}"></script>
+<div id="productsJson"></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("button").click(function() {
+      var productModel = {
+        id: "3",
+        name: "Ginger"
+      }
+      addProduct("localhost", "9091", productModel);
+    });
+  });
+</script>
+<button>Click here to submit the form</button>
+</body>
+</html>
