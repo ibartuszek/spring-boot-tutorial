@@ -1,4 +1,4 @@
-package com.example.productapp.scheduler;
+package com.example.commandlinerunner.scheduler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
