@@ -7,7 +7,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// Refresh: POST + http://localhost:8080/actuator/refresh
+// Refresh: POST + http://localhost:9000/actuator/refresh
+// Actuator can be reached via: http://localhost:9000/actuator
 
 @SpringBootApplication
 public class ConfigClientApplication {
