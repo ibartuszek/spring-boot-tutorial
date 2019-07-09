@@ -11,6 +11,8 @@
   <description>Demo project for Spring Boot</description>
 
   <modules>
+    <module>admin-client</module>
+    <module>admin-server</module>
     <module>command-line-runner</module>
     <module>config-client-application</module>
     <module>configuration-server</module>
