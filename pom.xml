@@ -18,6 +18,7 @@
     <module>configuration-server</module>
     <module>eurekaserver</module>
     <module>product-app</module>
+    <module>swagger2-demo</module>
     <module>zuul-proxy-server</module>
   </modules>
 
