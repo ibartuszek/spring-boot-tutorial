@@ -3,6 +3,8 @@ package com.example.adminclient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// client of AdminServerApplication
+
 @SpringBootApplication
 public class AdminClientApplication {
 

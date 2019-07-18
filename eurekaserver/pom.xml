@@ -19,20 +19,13 @@
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 		<jaxb-api.version>2.3.1</jaxb-api.version>
 		<jaxb-runtime.version>2.3.1</jaxb-runtime.version>
-		<javax-activation.version>1.1.1</javax-activation.version>
+		<javax-activation.version>1.2.0</javax-activation.version>
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -46,13 +39,6 @@
 			<artifactId>jaxb-runtime</artifactId>
 			<version>${jaxb-runtime.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>javax.activation</groupId>
-			<artifactId>activation</artifactId>
-			<version>${javax-activation.version}</version>
-		</dependency>
-
 	</dependencies>
 
 	<dependencyManagement>
@@ -75,5 +61,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>

@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 // Link: http://localhost:8888/config-client/default/master
+// client: ConfigClientApplication
 
 @SpringBootApplication
 @EnableConfigServer
